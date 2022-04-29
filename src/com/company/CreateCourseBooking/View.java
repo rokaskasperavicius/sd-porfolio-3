@@ -19,7 +19,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 public class View {
-  String[] times = {"Monday AM", "Monday PM", "Tuesday AM", "Tuesday PM", "Wednesday AM", "Wednesday PM", "Thursday AM", "Thursday PM", "Friday AM", "Friday PM"};
   final private GridPane root;
 
   // https://docs.oracle.com/javafx/2/ui_controls/table-view.htm#CJADAHAH

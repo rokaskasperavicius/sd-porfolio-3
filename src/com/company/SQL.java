@@ -9,6 +9,11 @@ public class SQL {
     try {
       String url = "jdbc:sqlite:db/database.db";
       conn = DriverManager.getConnection(url);
+
+      // sqlite by default does not check for foreign keys. This command has to be run every time when opening the database.
+      // I am not sure why intellij does not recognize PRAGMA keyword
+      PreparedStatement stmt = conn.prepareStatement("PRAGMA foreign_keys = ON;");
+      cmd(stmt);
     } catch (SQLException e) {
       System.out.println("Error while opening sqlite database: " + e);
     };

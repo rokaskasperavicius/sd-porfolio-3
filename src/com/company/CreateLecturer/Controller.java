@@ -14,7 +14,7 @@ public class Controller {
   void handleButtonClick(String lecturerName) {
     // Clear error text
     view.setErrorText("");
-    System.out.println(lecturerName);
+
     if (lecturerName.equals("")) {
       view.setErrorText("Error: Empty lecturer name");
       return;
