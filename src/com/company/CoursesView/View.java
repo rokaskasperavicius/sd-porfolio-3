@@ -42,7 +42,7 @@ public class View {
     root.setPadding(new Insets(20, 20, 20, 20));
 
 
-    ComboBox<String> courses = new CustomComboBox<>().comboBox;
+    ComboBox<String> courses = new CustomComboBox().comboBox;
 
     for (Course course: model.getCourses()) {
       courses.getItems().add(course.getName());

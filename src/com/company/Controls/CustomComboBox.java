@@ -2,7 +2,8 @@ package com.company.Controls;
 
 import javafx.scene.control.ComboBox;
 
-public class CustomComboBox<T> extends ComboBox<T> {
+// All combo boxes I use are Strings, therefore, I did not make it a generic class
+public class CustomComboBox {
   public ComboBox<String> comboBox;
 
   public CustomComboBox() {

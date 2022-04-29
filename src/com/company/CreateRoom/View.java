@@ -37,7 +37,7 @@ public class View {
     root.setVgap(10);
     root.setPadding(new Insets(20, 20, 20, 20));
 
-    root.add(new Text("Existing rooms"), 0, 1);
+    root.add(new Text("Existing rooms (capacity)"), 0, 1);
 
     roomsArea.setEditable(false);
 
@@ -66,7 +66,7 @@ public class View {
 
     root.add(backButton, 0, 9);
 
-    Text header = new Text("Add a room");
+    Text header = new Text("Create a room");
     header.setStyle("-fx-font: 16 Arial; -fx-font-weight: bold;");
 
     root.add(header, 0, 0);

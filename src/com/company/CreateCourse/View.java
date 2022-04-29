@@ -37,7 +37,7 @@ public class View {
     root.setVgap(10);
     root.setPadding(new Insets(20, 20, 20, 20));
 
-    root.add(new Text("Existing courses"), 0, 1);
+    root.add(new Text("Existing courses (capacity)"), 0, 1);
 
     coursesArea.setEditable(false);
 

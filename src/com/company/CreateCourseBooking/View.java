@@ -27,10 +27,10 @@ public class View {
 
   Text errorText = new Text("");
   Text warningText = new Text("");
-  ComboBox<String> courseBox = new CustomComboBox<>().comboBox;
-  ComboBox<String> lecturerBox = new CustomComboBox<>().comboBox;
-  ComboBox<String> slotBox = new CustomComboBox<>().comboBox;
-  ComboBox<String> roomBox = new CustomComboBox<>().comboBox;
+  ComboBox<String> courseBox = new CustomComboBox().comboBox;
+  ComboBox<String> lecturerBox = new CustomComboBox().comboBox;
+  ComboBox<String> slotBox = new CustomComboBox().comboBox;
+  ComboBox<String> roomBox = new CustomComboBox().comboBox;
 
   public GridPane getRoot() {
     return this.root;

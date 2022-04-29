@@ -1,13 +1,10 @@
 package com.company;
+
 import javafx.application.Application;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
-
-// Better error handling
-// SQL case insensitive string check
-// With splitting class in two different places I cant check if everybody is gonna fit
 
 public class Main extends Application {
   // Stage has to be static for me to be able to change stages from other classes
@@ -15,34 +12,34 @@ public class Main extends Application {
   private static Stage stage;
 
   public static void changeStage(String view) {
-    com.company.CoursesView.View courseView = new com.company.CoursesView.View();
-    com.company.CreateLecturer.View addLecturerView = new com.company.CreateLecturer.View();
-    com.company.CreateCourse.View addCourseView = new com.company.CreateCourse.View();
-    com.company.CreateRoom.View addRoomView = new com.company.CreateRoom.View();
-    com.company.CreateCourseBooking.View addTimeView = new com.company.CreateCourseBooking.View();
+    com.company.CoursesView.View coursesVew = new com.company.CoursesView.View();
+    com.company.CreateLecturer.View createLecturerView = new com.company.CreateLecturer.View();
+    com.company.CreateCourse.View createCourseView = new com.company.CreateCourse.View();
+    com.company.CreateRoom.View createRoomView = new com.company.CreateRoom.View();
+    com.company.CreateCourseBooking.View createCourseBookingView = new com.company.CreateCourseBooking.View();
 
     GridPane root;
     String title;
 
     switch (view) {
       case "createLecturer":
-        root = addLecturerView.getRoot();
+        root = createLecturerView.getRoot();
         title = "Create a Lecturer";
         break;
       case "createCourse":
-        root = addCourseView.getRoot();
+        root = createCourseView.getRoot();
         title = "Create a Course";
         break;
       case "createRoom":
-        root = addRoomView.getRoot();
+        root = createRoomView.getRoot();
         title = "Create a Room";
         break;
       case "createCourseBooking":
-        root = addTimeView.getRoot();
+        root = createCourseBookingView.getRoot();
         title = "Create a Course Booking";
         break;
       default:
-        root = courseView.getRoot();
+        root = coursesVew.getRoot();
         title = "Home";
         break;
     }

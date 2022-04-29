@@ -30,8 +30,7 @@ public class SQL {
     try {
       result = stmt.executeQuery();
 
-      // Exception instead of SQLException so that try block catches all errors including NULL pointer exception
-    } catch (Exception e) {
+    } catch (SQLException e) {
       System.out.println("Error while executing query: " + e);
     }
 

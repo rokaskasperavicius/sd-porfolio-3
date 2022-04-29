@@ -101,7 +101,7 @@ public class Model {
 
   public ArrayList<String> getSlots() {
     ArrayList<String> slots = new ArrayList<>();
-    String query = "SELECT name FROM slots ORDER BY name ASC;";
+    String query = "SELECT name FROM slots";
 
     Connection conn = sql.open();
 
@@ -304,7 +304,7 @@ public class Model {
     Connection conn = sql.open();
 
     // I use SQL transactions to make sure that both queries pass without no constraint errors
-    // setAutoCommit(false) allows to do rollbacks
+    // setAutoCommit(false) allows doing rollbacks
     try {
       conn.setAutoCommit(false);
     } catch (SQLException e) {
